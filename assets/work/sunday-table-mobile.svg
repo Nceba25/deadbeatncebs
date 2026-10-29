@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="800" viewBox="0 0 390 800">
+  <rect width="390" height="800" fill="#332722"/>
+  <circle cx="270" cy="395" r="195" fill="#a27e5e" opacity=".4"/>
+  <path d="M30 580h350v45H30zM72 625l24 175M340 625l-24 175" fill="#84705c"/>
+  <text x="28" y="55" fill="#d9c9ad" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">MOBILE SCREENSHOT PLACEHOLDER</text>
+  <text x="28" y="300" fill="#f0e5d6" font-family="Georgia,serif" font-size="44">Sunday</text>
+  <text x="28" y="350" fill="#f0e5d6" font-family="Georgia,serif" font-size="44">Table</text>
+  <text x="30" y="390" fill="#d9c9ad" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">COME AS YOU ARE</text>
+</svg>
