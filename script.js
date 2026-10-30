@@ -270,16 +270,16 @@ if (contactForm) {
     const submitButton = contactForm.querySelector('button[type="submit"]');
     submitButton.disabled = true;
     try {
-      const body = new URLSearchParams(new FormData(contactForm));
       const response = await fetch(contactForm.action, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          Accept: "application/json"
-        },
-        body
+        headers: { Accept: "application/json" },
+        body: new FormData(contactForm)
       });
-      if (!response.ok) throw new Error(`Form submission failed with status ${response.status}`);
+      const result = await response.json().catch(() => null);
+      if (!response.ok) {
+        const detail = result?.errors?.map((item) => item.message).join(" ");
+        throw new Error(detail || `Form submission failed with status ${response.status}`);
+      }
       contactForm.hidden = true;
       status.textContent = "Thanks for your note. I’ll be in touch soon.";
       window.history.replaceState({}, "", `${window.location.pathname}?submitted=true`);
